@@ -1,10 +1,10 @@
-# 📚 AI Study Companion (React Native)
+# 📚 AI Study Companion
 
-A simple and impactful mobile app built using **React Native and AI integration**, designed to generate study flashcards and quizzes based on any topic entered by the user.
+A simple and impactful study web application built with **Next.js**. It uses AI to generate study flashcards and quizzes based on any topic entered by the user.
 
 ## 🚀 Project Overview
 
-The **AI Study Companion** is designed to simulate a smart study mentor. Users enter a study topic (e.g., _Machine Learning_), and the app will:
+The **AI Study Companion** is designed to simulate a smart study mentor. Users enter a study topic (e.g., _Machine Learning_), and the application will:
 
 - Break it into **subtopics**.
 - Provide **readable learning cards** (like mini docs).
@@ -24,54 +24,41 @@ The **AI Study Companion** is designed to simulate a smart study mentor. Users e
 ## 🧪 Tech Stack
 
 | Category       | Technology                            |
-| -------------- | ------------------------------------- |
-| Framework      | React Native (Expo)                   |
-| UI             | React Native Paper / NativeBase       |
+| :------------- | :------------------------------------ |
+| Framework      | Next.js                               |
+| Language       | TypeScript                            |
+| Database       | PostgreSQL                            |
+| ORM            | Prisma                                |
+| UI             | Tailwind CSS / Shadcn/ui              |
+| PWA Support    | `next-pwa` for offline capabilities   |
 | AI Integration | OpenAI / HuggingFace API / Gemini API |
-| Storage        | AsyncStorage                          |
-| Optional       | Expo Speech (Text-to-Speech)          |
+| Deployment     | Vercel                                |
 
-## 🛠 Setup & Installation
+## 🛠️ Setup & Installation
 
-### 1️⃣ Install Expo CLI
-
-```bash
-npm install -g expo-cli
-```
-
-### 2️⃣ Create a New Project
+### 1️⃣ Create a New Project
 
 ```bash
-expo init ai-study-companion
+npx create-next-app@latest ai-study-companion-web --typescript --tailwind --eslint
 ```
 
-Choose **Blank Template**
-
-### 3️⃣ Navigate to Project Directory
+### 2️⃣ Navigate to Project Directory
 
 ```bash
-cd ai-study-companion
+cd ai-study-companion-web
 ```
+
+### 3️⃣ Setup Database with Prisma
+
+Follow the [Prisma "Add to existing project" guide](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/add-to-existing-project-typescript-postgres) to connect your PostgreSQL database.
 
 ### 4️⃣ Start Development Server
 
 ```bash
-expo start
+npm run dev
 ```
 
-Scan the QR code using **Expo Go App** on your phone.
-
-### 5️⃣ If LAN Mode Doesn’t Work (Tunnel Mode)
-
-Sometimes your phone cannot reach the Metro bundler on LAN. In that case, use **Tunnel Mode**:
-
-```bash
-npx expo start --tunnel
-```
-
-- Scan the QR code shown after starting in tunnel mode.
-- Alternatively, copy the `exp://` URL and paste it manually in Expo Go.
-- This works even if phone and PC are on different networks.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🧠 AI Prompt Example
 
