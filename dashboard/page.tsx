@@ -5,11 +5,13 @@ import Topbar from './components/Topbar';
 
 export default function DashboardPage() {
   return (
-    <div>
+    <div className="flex h-screen bg-background">
       {/* Dashboard layout and features go here */}
       <Sidebar />
-      <Topbar />
-      <DashboardWrapper />
+      <div className="flex flex-col flex-1 overflow-hidden">
+        <Topbar />
+        <DashboardWrapper />
+      </div>
     </div>
   );
 }
