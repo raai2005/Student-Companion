@@ -1,80 +1,68 @@
-# 📚 AI Study Companion
+# AI Study Companion App
 
-A simple and impactful study web application built with **Next.js**. It uses AI to generate study flashcards and quizzes based on any topic entered by the user.
+A modern, modular, and extensible study companion web application built with Next.js, TypeScript, Tailwind CSS, and Shadcn UI. This app is designed to help students organize, learn, and track their study progress with features like flashcards, quizzes, roadmaps, analytics, and more.
 
-## 🚀 Project Overview
-
-The **AI Study Companion** is designed to simulate a smart study mentor. Users enter a study topic (e.g., _Machine Learning_), and the application will:
-
-- Break it into **subtopics**.
-- Provide **readable learning cards** (like mini docs).
-- Then generate **flashcards with Q&A** for each subtopic.
-- Guide users to choose specific areas they want to focus on.
-- Offer **quiz mode** to test knowledge.
-
-## 🎯 Core Features
-
-- ✍️ **Topic Input** – Enter any subject or concept.
-- 🤖 **AI Flashcard Generation** – Automatic Q/A flashcards using AI API.
-- 📝 **Quiz Mode (Optional)** – AI-generated MCQs or True/False questions.
-- 🔄 **Flashcard Viewer** – Swipe or flip through cards.
-- 💾 **Save for Review** – Store important cards locally.
-- 🔊 **Text-to-Speech (Optional)** – Listen to flashcards.
-
-## 🧪 Tech Stack
-
-| Category       | Technology                            |
-| :------------- | :------------------------------------ |
-| Framework      | Next.js                               |
-| Language       | TypeScript                            |
-| Database       | PostgreSQL                            |
-| ORM            | Prisma                                |
-| UI             | Tailwind CSS / Shadcn/ui              |
-| PWA Support    | `next-pwa` for offline capabilities   |
-| AI Integration | OpenAI / HuggingFace API / Gemini API |
-| Deployment     | Vercel                                |
-
-## 🛠️ Setup & Installation
-
-### 1️⃣ Create a New Project
-
-```bash
-npx create-next-app@latest ai-study-companion-web --typescript --tailwind --eslint
-```
-
-### 2️⃣ Navigate to Project Directory
-
-```bash
-cd ai-study-companion-web
-```
-
-### 3️⃣ Setup Database with Prisma
-
-Follow the [Prisma "Add to existing project" guide](https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/add-to-existing-project-typescript-postgres) to connect your PostgreSQL database.
-
-### 4️⃣ Start Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## 🧠 AI Prompt Example
+## Project Structure
 
 ```
-Generate 5 flashcards about "Photosynthesis".
-Format:
-Q: ...
-A: ...
+AiStudyCompanionApp/
+├── dashboard/           # Main dashboard and all feature modules
+│   ├── components/      # Shared dashboard UI components (Sidebar, Topbar, etc.)
+│   ├── features/        # Feature modules (QuickQuiz, Flashcards, Roadmap, etc.)
+│   ├── utils/           # Utility functions for dashboard features
+│   ├── layout.tsx       # Dashboard layout wrapper
+│   └── page.tsx         # Dashboard entry point
+├── landingPage/         # Landing page sections (Hero, Features, CTA, Footer)
+├── loginPage/           # Login page components and layout
+├── registerPage/        # Register page components and layout
+├── pages/               # Next.js routing pages (_app.tsx, index.tsx, etc.)
+├── styles.css           # Tailwind CSS and Shadcn UI theme variables
+├── tailwind.config.js   # Tailwind CSS configuration
+├── postcss.config.js    # PostCSS configuration
+├── tsconfig.json        # TypeScript configuration
+├── package.json         # Project dependencies and scripts
+└── Readme.md            # Project documentation (this file)
 ```
 
-## 📌 Future Enhancements
+## Key Features
 
-- Dark/Light Mode
-- Voice Input for topic
-- Export flashcards to PDF
+- **Dashboard**: Central hub for all study tools and analytics
+- **Flashcards**: Create, review, and manage study flashcards
+- **Quick Quiz**: Take quick quizzes to test your knowledge
+- **Roadmap**: Visualize your study plan and progress
+- **Analytics**: Track your learning performance with charts and stats
+- **Favorites**: Save and organize important study items
+- **Mock Interview**: Practice with AI-powered interview simulations
+- **Profile**: Manage user settings, theme, and API keys
+- **Help**: Access guides and FAQs
 
----
+## Styling & UI
 
-🔖 _This README will be expanded as development continues._
+- **Tailwind CSS**: Utility-first CSS for rapid UI development
+- **Shadcn UI**: Modern, accessible component design system
+- **Dark Mode**: Fully supported via Tailwind's class strategy
+
+## Workflow
+
+1. **Landing Page**: Users are greeted with a modern landing page highlighting features.
+2. **Authentication**: Users can register or log in via dedicated pages.
+3. **Dashboard**: After login, users access the dashboard with sidebar navigation to all features.
+4. **Feature Modules**: Each feature (Flashcards, Quiz, etc.) is modular and can be extended independently.
+5. **Styling**: All components use Tailwind CSS classes and Shadcn UI patterns for consistency.
+
+## Development
+
+- Start the dev server: `npm run dev`
+- Build for production: `npm run build`
+- Lint code: `npm run lint`
+
+## Extending the App
+
+- Add new features as modules in `dashboard/features/`
+- Create shared UI in `dashboard/components/`
+- Use utility functions from `dashboard/utils/`
+- Update theme and styles in `styles.css` and `tailwind.config.js`
+
+## License
+
+MIT

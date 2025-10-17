@@ -1,34 +1,19 @@
 # Login Page
 
-This folder contains all the components and data required for the login page of the AI Study Companion App.
+The login page provides a secure and user-friendly authentication interface for users to access the dashboard.
 
 ## Structure
 
-- `form.tsx` — Login form component
-- `footer.tsx` — Footer component (shared or specific to login page)
-- `hero.tsx` — Hero/banner section for login (optional)
-- `page.tsx` — Main login page layout, imports and arranges all sections
-
-## Usage
-
-Import and use the `LoginPage` component from `page.tsx` to render the full login page. Each section is modular and can be used independently if needed.
-
-## Notes
-
-- All imports are relative within this folder.
-- Ensure you have the required dependencies (e.g., React, any UI libraries).
-- Adjust or add components as needed for your authentication flow.
-
-## Example
-
-```tsx
-import LoginPage from "./loginPage/page";
-
-export default function Login() {
-  return <LoginPage />;
-}
+```
+loginPage/
+├── hero.tsx         # Login page hero/intro section
+├── form.tsx         # Login form component
+├── footer.tsx       # Login page footer
+└── loginPage.module.css (removed, now using Tailwind)
 ```
 
----
+## Workflow
 
-**Last updated:** October 17, 2025
+- The login page is composed of a hero section, login form, and footer.
+- The form handles user authentication and validation.
+- All components are styled with Tailwind CSS and Shadcn UI.
